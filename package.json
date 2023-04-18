@@ -2,13 +2,10 @@
   "name": "@dk/monorepo",
   "private": true,
   "version": "1.0.0",
-  "comments": {
-    "turbo-filter-template": "Exclude the template package from pipeline runs"
-  },
   "scripts": {
-    "dev": "turbo run dev",
-    "build": "turbo run build --filter=!@dk/template --output-logs=errors-only",
-    "lint": "turbo run lint --filter=!@dk/template --output-logs=errors-only"
+    "dev": "turbo dev",
+    "lint": "turbo lint --output-logs=errors-only",
+    "typecheck": "turbo typecheck"
   },
   "devDependencies": {
     "eslint": "8.37.0",

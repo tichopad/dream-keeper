@@ -2,11 +2,11 @@
   "$schema": "https://turborepo.org/schema.json",
   "globalDependencies": [".env", ".prettierrc.js", "tsconfig.json"],
   "pipeline": {
-    "build": {
-      "dependsOn": ["^build"]
+    "typecheck": {
+      "dependsOn": ["^typecheck"]
     },
     "lint": {
-      "dependsOn": ["format"],
+      "dependsOn": ["format", "typecheck"],
       "inputs": ["**/*.{js,jsx,ts,tsx}"],
       "outputs": [".eslintcache"]
     },
